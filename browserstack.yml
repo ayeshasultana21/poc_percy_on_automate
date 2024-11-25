@@ -1,0 +1,19 @@
+userName: ayeshasultana_<>
+accessKey: <>
+projectName: 'Percy on Automate'
+buildName: 'browserstack build percy on automate'
+buildIdentifier: '#${BUILD_NUMBER}'
+framework: robot
+platforms:
+  - os: OS X
+    osVersion: Big Sur
+    browserName: Safari
+    browserVersion: latest
+
+parallelsPerPlatform: 1
+
+browserstackLocal: true    # <boolean> (Default false)
+
+debug: true
+networkLogs: false
+consoleLogs: debug
