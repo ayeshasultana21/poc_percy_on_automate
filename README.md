@@ -5,6 +5,7 @@
    
 # Error details:
 
+```
 19:11:14 [browserstack_sdk.__init__][INFO] - View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/45c8255fa9e23534fbbc45cdc00ff8d103d2d080
 
 19:11:14 [browserstack_sdk.__init__][INFO] - Handling session close
@@ -46,7 +47,7 @@
 [percy:core] Build's CLI and CI logs sent successfully. Please share this log ID with Percy team in case of any issues - 37551191_build_37551191_cli_16b0f2065e208f0e6f7bba255a0c00f38c9c2d54 (1ms)
 
 [percy:cli:exec] Command "browserstack-sdk robot test.robot" exited with status: 0 (0ms)
-
+```
 
 
 # Versions: 
