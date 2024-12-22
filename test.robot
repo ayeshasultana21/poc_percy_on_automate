@@ -10,10 +10,12 @@ ${OS_X}                     OS X
 ${OSVERSION_X}              Ventura
 ${BROWSER_SAFARI}           Safari
 ${BROWSERVERSION}           latest
-${BASEURL}                  https://www.google.com/
+${BASEURL}                  https://qa.counterparthealth.com/
+# https://qa.counterparthealth.com/
+# https://google.com/ 
 # Careful when changing the resolution to a new one. Browser Stack has only several resolutions they support
 ${BROWSER_RESOLUTION}       1920x1080    # most popular browser size by our production users according to mode report
-${BROWSERSTACK_IDENTIFIER}        compatibility_tests
+${BROWSERSTACK_IDENTIFIER}        test_percy_automate
 @{RESOLUTIONS}                          1920
 ${PERCY_MAX_PAGE_HEIGHT}                2000
 
@@ -25,7 +27,7 @@ Setup BrowserStack     # robocop: off=too-long-keyword,too-many-arguments,too-ma
     VAR    ${browserstackAccessKey}    %{BROWSERSTACK_ACCESSKEY}
 
     ${bstack_options}=    Create Dictionary    os=${OS_X}    osVersion=${OSVERSION_X}    browser=${BROWSER_SAFARI}
-    ...    browserVersion=${browser_version}    local=true    localIdentifier=${BROWSERSTACK_IDENTIFIER}
+    ...    browserVersion=${browser_version}    local=true
     ...    resolution=${browserResolution}    userName=${browserstackUserName}
     ...    accessKey=${browserstackAccessKey}    maskCommands=setValues    timezone=Brunei
 
@@ -36,12 +38,12 @@ Setup BrowserStack     # robocop: off=too-long-keyword,too-many-arguments,too-ma
     ${driver}=    Create Webdriver    Remote    command_executor=${executor}    options=${options}
 
 *** Test Cases ***
-Chrome Login Page     # robocop: off=too-many-calls-in-test-case,too-long-test-case,too-many-calls-in-keyword
+Safari Login Page     # robocop: off=too-many-calls-in-test-case,too-long-test-case,too-many-calls-in-keyword
     [Documentation]    Sample test to verify Percy on Automate. 
     Setup BrowserStack
-    Go To    https://www.google.com/
+    Go To    ${BASEURL}
     Maximize Browser Window
-    RF Percy On Automate Screenshot    Chrome    
+    RF Percy On Automate Screenshot    SafariScreenshot    
     [Teardown]    Close Browser
 
 *** Keywords ***

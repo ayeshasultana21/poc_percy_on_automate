@@ -12,7 +12,7 @@ platforms:
 
 parallelsPerPlatform: 1
 
-browserstackLocal: true    # <boolean> (Default false)
+browserstackLocal: true   # <boolean> (Default false)
 
 debug: true
 networkLogs: false

@@ -14,10 +14,7 @@ def take_full_page_screenshot(screenshot_name, resolutions, height):
     # take screenshot
     try:
         percy_screenshot(driver=driver,
-                         name=screenshot_name,
-                         widths=resolutions,
-                         minHeight=int(height),
-                         enableLayout=False)
+                         name=screenshot_name)
         logging.info("Screenshot might be taken")
     except Exception as e:
         logging.error("Error takign percy screenshot")
