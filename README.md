@@ -1,8 +1,12 @@
 # How to run:
    export PERCY_TOKEN=auto_<>
+   
    Setup browser stack local:
+   
    ./BrowserStackLocal --key <> --force-local 
-   to run the test:
+   
+   To run the test:
+
    npx percy exec --verbose robot test.robot
    
 # Error details:
