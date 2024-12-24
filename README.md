@@ -1,7 +1,9 @@
 # How to run:
    export PERCY_TOKEN=auto_<>
-
-   npx percy exec --verbose -- browserstack-sdk robot test.robot
+   Setup browser stack local:
+   ./BrowserStackLocal --key <> --force-local 
+   to run the test:
+   npx percy exec --verbose robot test.robot
    
 # Error details:
 
